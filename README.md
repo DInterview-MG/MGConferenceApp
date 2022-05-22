@@ -1,5 +1,7 @@
 # MG Conference App
 
+Simple 1:1 video conferencing app for Android using mediasoup and WebRTC.
+
 ## Features
 
 * At startup, prompts the user for the hostname and port of the signaling server, and allows them
@@ -8,6 +10,8 @@
 * Captures and sends a video stream from the front webcam, and an audio stream from the microphone.
 
 * Plays incoming video and audio streams of your choice -- this can be changed at runtime.
+
+<img src="screenshot.png" alt="drawing" width="360"/>
 
 ## How to use
 
@@ -35,11 +39,11 @@ subscribe to.
   production :)
 
 * Due to the number of callbacks coming from various threads, I've added a class called
-  `SingleThreadedVar`, which will throw an exception if it's accessed from any thread other than
-  the one it was created on. I think this is safer than e.g. simply using an `AtomicReference`,
-  as it ensures that all operations involving those variables are serialized on the same thread.
-  `Atomic` types and mutexes are often used in a way which is too granular to provide real thread
-  safety.
+  `SingleThreadedVar`, which contains a value, and will throw an exception if it's accessed from
+  any thread other than the one it was created on. I think this is safer than e.g. simply using an
+  `AtomicReference`, as it ensures that all operations involving those variables are serialized on 
+  the same thread. `Atomic*` types and mutexes are often used in a way which is too granular to
+  provide real thread safety.
 
 ## Limitations
 
