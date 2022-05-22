@@ -2,18 +2,21 @@
 
 ## Features
 
+* At startup, prompts the user for the hostname and port of the signaling server, and allows them
+  to join the room.
+
 * Captures and sends a video stream from the front webcam, and an audio stream from the microphone.
 
-* Can play incoming video and audio streams of your choice, including changing this at runtime.
-
-* Connects to the hostname and port specified in the UI at startup.
+* Plays incoming video and audio streams of your choice -- this can be changed at runtime.
 
 ## How to use
 
 The app can be built with Gradle in the usual way:
 
 ```shell
-$ ./gradlew packageDebug
+./gradlew packageDebug
+
+adb -s <device> install ./app/build/outputs/apk/debug/app-debug.apk
 ```
 
 After installing, specify the hostname and port in the text fields, and tap "Connect via HTTPS".
