@@ -56,3 +56,6 @@ There are various things I would've liked to do given more time:
 * When a connection is shut down, there's a flurry of internal Android logging about dead threads,
   and the WebRTC EglRenderer continues logging for about a minute. It would be good to investigate
   this further, although it may turn out to be a library bug. For now it seems harmless.
+
+* Again due to the time constraints, there are no unit tests/other automated testing for this
+  project. In a production app, it would be good to have automated testing of end-to-end calls.
