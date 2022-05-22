@@ -11,7 +11,7 @@ Simple 1:1 video conferencing app for Android using mediasoup and WebRTC.
 
 * Plays incoming video and audio streams of your choice -- this can be changed at runtime.
 
-<img src="screenshot.png" alt="drawing" width="360"/>
+<p align="center"><img src="screenshot.png" alt="drawing" width="240"/></p>
 
 ## How to use
 
